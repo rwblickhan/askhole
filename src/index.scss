@@ -1,0 +1,123 @@
+:root {
+  // Transitional from https://modernfontstacks.com
+  font-family: Charter, "Bitstream Charter", "Sitka Text", Cambria, serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color-scheme: light dark;
+  color: rgb(255 255 255 / 87%);
+  background-color: #242424;
+  font-synthesis: none;
+  text-rendering: optimizelegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@layer reset {
+  // Reset based on https://keithjgrant.com/posts/2024/01/my-css-resets/
+
+  *,
+  *::before,
+  *::after {
+    // Enable border-box everywhere
+    box-sizing: border-box;
+  }
+
+  html {
+    // Prevent font size inflation
+    text-size-adjust: none;
+  }
+
+  body {
+    // Remove default <body> margin
+    margin: unset;
+  }
+
+  button,
+  input,
+  textarea,
+  select {
+    // Controls and textareas should use the same fonts
+    font: inherit;
+  }
+
+  img,
+  picture,
+  svg,
+  canvas {
+    // Make images behave better
+    display: block;
+    max-inline-size: 100%;
+    block-size: auto;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      // Turn off animations if prefers-reduced-motion
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+
+  &:hover {
+    color: #535bf2;
+  }
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+
+  &:hover {
+    border-color: #646cff;
+  }
+
+  &:focus,
+  &:focus-visible {
+    outline: 4px auto -webkit-focus-ring-color;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #fff;
+  }
+
+  a:hover {
+    color: #747bff;
+  }
+
+  button {
+    background-color: #f9f9f9;
+  }
+}
