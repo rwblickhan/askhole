@@ -1,12 +1,15 @@
 import { useState } from "preact/hooks";
 import { Dialog } from "@capacitor/dialog";
-import preactLogo from "./assets/preact.svg";
-import viteLogo from "/vite.svg";
 import "./app.scss";
 import { useShake } from "./useShake";
+import questions from "./questions.json";
+import extraQuestions from "./extra_questions.json";
 
 export function App() {
-  const [count, setCount] = useState(0);
+  const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
+  const [questionSet, setQuestionSet] = useState<"original" | "extra">(
+    "original"
+  );
   useShake(() => {
     Dialog.alert({
       title: "Shake it...",
@@ -17,37 +20,37 @@ export function App() {
   });
 
   return (
-    <div>
-      <div className="buttons">
-        <a href="https://vitejs.dev" target="_blank" rel="noreferrer">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://preactjs.com" target="_blank" rel="noreferrer">
-          <img src={preactLogo} className="logo preact" alt="Preact logo" />
-        </a>
-      </div>
-      <h1>Vite + Preact</h1>
-      <div className="card">
+    <div className="container">
+      <p className="question">
+        {questionSet === "original"
+          ? questions[currentQuestionIndex]
+          : extraQuestions[currentQuestionIndex]}
+      </p>
+
+      <div className="button-container">
         <button
+          className="randomize-button"
           onClick={() => {
-            Dialog.alert({
-              title: "Single-tapped",
-              message: "You did it!"
-            }).catch((e) => {
-              console.error(e);
-            });
-            setCount((count) => count + 1);
+            setQuestionSet("original");
+            setCurrentQuestionIndex(
+              Math.floor(Math.random() * questions.length)
+            );
           }}
         >
-          count is {count}
+          Random question (original)
         </button>
-        <p>
-          Edit <code>src/app.tsx</code> and save to test HMR
-        </p>
+        <button
+          className="randomize-button"
+          onClick={() => {
+            setQuestionSet("extra");
+            setCurrentQuestionIndex(
+              Math.floor(Math.random() * extraQuestions.length)
+            );
+          }}
+        >
+          Random question (extra)
+        </button>
       </div>
-      <p className="read-the-docs">
-        Click on the Vite and Preact logos to learn more
-      </p>
     </div>
   );
 }
