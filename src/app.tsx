@@ -1,4 +1,5 @@
 import { useState } from "preact/hooks";
+import { Dialog } from "@capacitor/dialog";
 import preactLogo from "./assets/preact.svg";
 import viteLogo from "/vite.svg";
 import "./app.scss";
@@ -7,7 +8,7 @@ export function App() {
   const [count, setCount] = useState(0);
 
   return (
-    <>
+    <div>
       <div className="buttons">
         <a href="https://vitejs.dev" target="_blank" rel="noreferrer">
           <img src={viteLogo} className="logo" alt="Vite logo" />
@@ -20,6 +21,12 @@ export function App() {
       <div className="card">
         <button
           onClick={() => {
+            Dialog.alert({
+              title: "Single-tapped",
+              message: "You did it!"
+            }).catch((e) => {
+              console.error(e);
+            });
             setCount((count) => count + 1);
           }}
         >
@@ -32,6 +39,6 @@ export function App() {
       <p className="read-the-docs">
         Click on the Vite and Preact logos to learn more
       </p>
-    </>
+    </div>
   );
 }
