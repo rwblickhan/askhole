@@ -3,9 +3,18 @@ import { Dialog } from "@capacitor/dialog";
 import preactLogo from "./assets/preact.svg";
 import viteLogo from "/vite.svg";
 import "./app.scss";
+import { useShake } from "./useShake";
 
 export function App() {
   const [count, setCount] = useState(0);
+  useShake(() => {
+    Dialog.alert({
+      title: "Shake it...",
+      message: "Like a Polaroid picture..."
+    }).catch((e) => {
+      console.error(e);
+    });
+  });
 
   return (
     <div>

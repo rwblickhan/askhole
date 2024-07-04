@@ -20,6 +20,9 @@ importers:
       '@capacitor/ios':
         specifier: ^6.1.0
         version: 6.1.0(@capacitor/core@6.1.0)
+      '@capgo/capacitor-shake':
+        specifier: ^6.0.20
+        version: 6.0.20(@capacitor/core@6.1.0)
       preact:
         specifier: ^10.19.3
         version: 10.19.3
@@ -214,6 +217,11 @@ packages:
     resolution: {integrity: sha512-ex2q0LAyDDgfJj4fKDQuSNUYSpic3939/8A/sIIIxslwuRBF5i5fuhAngu6BhCt/pQSfEETcHtg2j2vD+YEZ2w==}
     peerDependencies:
       '@capacitor/core': ^6.1.0
+
+  '@capgo/capacitor-shake@6.0.20':
+    resolution: {integrity: sha512-/KZ9AHT/roYMmf4zam9mI6fZqhbi0JCmjixNsrkbPpJClYXmQw1znhm6MnfB3b4bIULLUSo/90RL6S1fDQ00wA==}
+    peerDependencies:
+      '@capacitor/core': ^6.0.0
 
   '@csstools/css-parser-algorithms@2.5.0':
     resolution: {integrity: sha512-abypo6m9re3clXA00eu5syw+oaPHbJTPapu9C4pzNsJ4hdZDzushT50Zhu+iIYXgEe1CxnRMn7ngsbV+MLrlpQ==}
@@ -2510,6 +2518,10 @@ snapshots:
       '@capacitor/core': 6.1.0
 
   '@capacitor/ios@6.1.0(@capacitor/core@6.1.0)':
+    dependencies:
+      '@capacitor/core': 6.1.0
+
+  '@capgo/capacitor-shake@6.0.20(@capacitor/core@6.1.0)':
     dependencies:
       '@capacitor/core': 6.1.0
 

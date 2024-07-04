@@ -1,0 +1,34 @@
+PODS:
+  - Capacitor (6.1.0):
+    - CapacitorCordova
+  - CapacitorCordova (6.1.0)
+  - CapacitorDialog (6.0.0):
+    - Capacitor
+  - CapgoCapacitorShake (6.0.20):
+    - Capacitor
+
+DEPENDENCIES:
+  - "Capacitor (from `../../node_modules/.pnpm/@capacitor+ios@6.1.0_@capacitor+core@6.1.0/node_modules/@capacitor/ios`)"
+  - "CapacitorCordova (from `../../node_modules/.pnpm/@capacitor+ios@6.1.0_@capacitor+core@6.1.0/node_modules/@capacitor/ios`)"
+  - "CapacitorDialog (from `../../node_modules/.pnpm/@capacitor+dialog@6.0.0_@capacitor+core@6.1.0/node_modules/@capacitor/dialog`)"
+  - "CapgoCapacitorShake (from `../../node_modules/.pnpm/@capgo+capacitor-shake@6.0.20_@capacitor+core@6.1.0/node_modules/@capgo/capacitor-shake`)"
+
+EXTERNAL SOURCES:
+  Capacitor:
+    :path: "../../node_modules/.pnpm/@capacitor+ios@6.1.0_@capacitor+core@6.1.0/node_modules/@capacitor/ios"
+  CapacitorCordova:
+    :path: "../../node_modules/.pnpm/@capacitor+ios@6.1.0_@capacitor+core@6.1.0/node_modules/@capacitor/ios"
+  CapacitorDialog:
+    :path: "../../node_modules/.pnpm/@capacitor+dialog@6.0.0_@capacitor+core@6.1.0/node_modules/@capacitor/dialog"
+  CapgoCapacitorShake:
+    :path: "../../node_modules/.pnpm/@capgo+capacitor-shake@6.0.20_@capacitor+core@6.1.0/node_modules/@capgo/capacitor-shake"
+
+SPEC CHECKSUMS:
+  Capacitor: 187bd7847b6f71467015a20200a1a071be3e5f14
+  CapacitorCordova: be703980ca797f847c3356f78fa175d21c8330c2
+  CapacitorDialog: 64aa82840ee5e9c066f9e1a49c1e186afd3f24d2
+  CapgoCapacitorShake: bdacd29791783707a920a68670a5e2fd1a2bb8e2
+
+PODFILE CHECKSUM: 673b8d93df7cf70af4ae1ede9f16c3819c6cdc54
+
+COCOAPODS: 1.15.2
