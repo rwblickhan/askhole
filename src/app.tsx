@@ -4,12 +4,13 @@ import "./app.scss";
 import { useShake } from "./useShake";
 import questions from "./questions.json";
 import extraQuestions from "./extra_questions.json";
+import russellQuestions from "./russell_questions.json";
 
 export function App() {
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
-  const [questionSet, setQuestionSet] = useState<"original" | "extra">(
-    "original"
-  );
+  const [questionSet, setQuestionSet] = useState<
+    "original" | "extra" | "russell"
+  >("original");
   useShake(() => {
     Dialog.alert({
       title: "Shake it...",
@@ -24,7 +25,9 @@ export function App() {
       <p className="question">
         {questionSet === "original"
           ? questions[currentQuestionIndex]
-          : extraQuestions[currentQuestionIndex]}
+          : questionSet === "russell"
+            ? russellQuestions[currentQuestionIndex]
+            : extraQuestions[currentQuestionIndex]}
       </p>
 
       <div className="button-container">
@@ -49,6 +52,17 @@ export function App() {
           }}
         >
           Random question (extra)
+        </button>
+        <button
+          className="randomize-button"
+          onClick={() => {
+            setQuestionSet("russell");
+            setCurrentQuestionIndex(
+              Math.floor(Math.random() * russellQuestions.length)
+            );
+          }}
+        >
+          Random question (Russell&apos;s set)
         </button>
       </div>
     </div>
