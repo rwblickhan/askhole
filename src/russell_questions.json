@@ -12,7 +12,7 @@
   "It's kind of weird that we keep small canines in captivity, isn't it? Should we outlaw dog ownership?",
   "Is Jeff Koons (the balloon dog artist) a hack, an artistic genius, or just a good businessman?",
   "Are large language models fundamentally based on large-scale theft of copyright works?",
-  "Do you have a morning routine? What is the least important part of it?",
+  "Do you have a morning routine? What is the most important part of it? What is the least important part of it?",
   "Is it ethically wrong to buy non-fair-trade / unsustainable coffee (or other goods) if you can afford fair-trade / sustainable coffee (or other goods)? What if you can only afford non-fair-trade / unsustainable?",
   "What is a mythical creature that you think no one in this group has heard of?",
   "What's your favorite language? Why?",
@@ -23,7 +23,7 @@
   "In what way are you most stereotypical for a community you're in?",
   "In what way are you least stereotypical for a community you're in?",
   "When is the last time you read a textbook? Why don't you read them more often?",
-  "List the top 5 media that have influenced you the most.",
+  "List the top 5 stories, media, or works of art that have influenced you the most.",
   "Do you prefer subs or dubs?",
   "Do you think people in other cultures are fundamentally similar to you or fundamentally different?",
   "What is the most important software application you use on a regular basis?",
@@ -33,5 +33,8 @@
   "Do you think men and women are fundamentally the same or fundamentally different? How do you account for obvious statistical differences (e.g. men are stronger than women on average)? How do you account for trans and intersex folks?",
   "If you had to choose a different name for yourself, what would it be?",
   "Is it ethical to eat out? Is it ethical to order delivery? Is it ethical to have a surrogate pregnancy?",
-  "What is your dream project?"
+  "What is your dream project?",
+  "Should we domesticate raccoons? Why or why not?",
+  "Do you drink alcohol? Do you take drugs? How about caffeine? If your answers are different, why are they different?",
+  "What's a book / movie / musical / etc that you want to read / watch / see / etc, but probably never will. Why won't you?"
 ]
